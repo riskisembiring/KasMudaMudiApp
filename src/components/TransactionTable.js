@@ -38,23 +38,25 @@ function KasPage() {
     setFilteredData(filtered);
   };
 
-  const handleDelete = (id) => {
-    fetch(`https://kas-muda-mudi.vercel.app/api/income/delete/${id}`, {
-      method: "DELETE",
+const handleDelete = (id) => {
+  fetch(`https://kas-muda-mudi.vercel.app/api/income/delete?id=${id}`, {
+    method: "DELETE",
+  })
+    .then((res) => res.json())
+    .then((response) => {
+      alert(response.message);
+
+      // Filter data lokal, buang yang id-nya sama
+      const updated = data.filter((item) => item.id !== id);
+      setData(updated);
+      setFilteredData(updated);
+      setSelectedRowKeys([]);
     })
-      .then((res) => res.json())
-      .then((data) => {
-        alert(data.message);
-        const updated = data.filter((item) => item.id !== id);
-        setData(updated);
-        setFilteredData(updated);
-        setSelectedRowKeys([]);
-      })
-      .catch((err) => {
-        alert("Gagal menghapus data");
-        console.error(err);
-      });
-  };
+    .catch((err) => {
+      alert("Gagal menghapus data");
+      console.error(err);
+    });
+};
 
   // Fungsi export Excel
   const exportToExcel = () => {

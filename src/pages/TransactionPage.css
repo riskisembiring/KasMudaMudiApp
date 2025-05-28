@@ -5,7 +5,7 @@
 
   .header-row {
     display: flex;
-    gap: 35vw;
+    gap: 28vw;
     align-items: center;
     flex-wrap: wrap;
   }
@@ -25,10 +25,6 @@
       align-items: flex-start;
       gap: 8px;
       width: 100%;
-    }
-
-    .judul-transaksi {
-        
     }
 
     .search-box,
