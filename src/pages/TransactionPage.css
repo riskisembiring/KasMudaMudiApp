@@ -1,0 +1,47 @@
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-row {
+    display: flex;
+    gap: 35vw;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .judul-transaksi {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .search-box {
+    max-width: 200px;
+  }
+
+  @media (max-width: 576px) {
+    .header-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .judul-transaksi {
+        
+    }
+
+    .search-box,
+    .export-btn {
+      width: 50% !important;
+    }
+
+    .judul-transaksi {
+      font-size: 16px !important;
+    }
+
+    .transaksi-card,
+    .transaksi-card * {
+      font-size: 12px !important;
+    }
+  }
