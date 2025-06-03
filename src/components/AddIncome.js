@@ -70,15 +70,16 @@ function AddIncome({ onAdd, onShowTransactions }) {
         >
           <Select style={{ width: "100%" }} placeholder="Pilih Gereja Cabang">
             <Option value="sidomulyo">GSRI Sidomulyo</Option>
+            <Option value="serdang">GSRI Serdang</Option>
             <Option value="pasar5">GSRI Pasar 5</Option>
-            <Option value="bekiung">GSRI Sibirik</Option>
-            <Option value="bekiung">GSRI Gelugur</Option>
-            <Option value="bekiung">GSRI Bekiung</Option>
-            <Option value="bekiung">GSRI Sukajulu</Option>
-            <Option value="bekiung">GSRI Perbulan</Option>
-            <Option value="bekiung">GSRI Haunatas</Option>
-            <Option value="bekiung">GSRI Porsea</Option>
-            <Option value="bekiung">GSRI Siantar</Option>
+            <Option value="Sibirik">GSRI Sibirik</Option>
+            <Option value="Gelugur">GSRI Gelugur</Option>
+            <Option value="Bekiung">GSRI Bekiung</Option>
+            <Option value="Sukajulu">GSRI Sukajulu</Option>
+            <Option value="Pebulan">GSRI Perbulan</Option>
+            <Option value="Haunatas">GSRI Haunatas</Option>
+            <Option value="Porsea">GSRI Porsea</Option>
+            <Option value="Siantar">GSRI Siantar</Option>
           </Select>
         </Form.Item>
         <Form.Item
