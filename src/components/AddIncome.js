@@ -23,7 +23,7 @@ function AddIncome({ onAdd, onShowTransactions }) {
     };
 
     try {
-      const response = await fetch("https://kas-muda-mudi.vercel.app/api/income/save", {
+      const response = await fetch("https://kas-muda-mudi.vercel.app/api/income", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -16,7 +16,7 @@ function KasPage() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://kas-muda-mudi.vercel.app/api/income/get")
+    fetch("https://kas-muda-mudi.vercel.app/api/income")
       .then((res) => res.json())
       .then((result) => {
         const withType = result.map((item) => ({ ...item, type: "income" }));
@@ -39,7 +39,7 @@ function KasPage() {
   };
 
 const handleDelete = (id) => {
-  fetch(`https://kas-muda-mudi.vercel.app/api/income/delete?id=${id}`, {
+  fetch(`https://kas-muda-mudi.vercel.app/api/income/?id=${id}`, {
     method: "DELETE",
   })
     .then((res) => res.json())
